@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #990011;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 2.5em; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+
+nav ul li a:hover {
+    background-color: white; 
+    color: #333; 
+}
+
+nav ul li a.active {
+    background-color: white; 
+    color: #333; 
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+form {
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    width: 100%; 
+    max-width: 400px;
+    margin: auto; 
+    padding: 20px; 
+    background-color: wheat; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+form label {
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    color: #333; 
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 95%; 
+    padding: 10px; 
+    font-size: 1em; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    transition: border-color 0.3s ease; 
+}
+
+form input[type="submit"] {
+    padding: 10px 15px; 
+    background-color: #007bff; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 1em; 
+    transition: background-color 0.3s ease; 
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+
+.logo-container {
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+.logo-img {
+    max-width: 100%; 
+    height: auto; 
+    width: auto; 
+    max-height: 421px; 
+}    
+
+/* Headings */
+section h2 {
+    text-align: center; 
+    color: #990011; 
+    font-size: 2rem; 
+}
+
+/* Paragraphs */
+section p {
+    line-height: 1.49; 
+    margin-bottom: 15px; 
+    color: #333; 
+    font-size: 1.2rem; 
+    padding: 0 10px; 
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center align items */
+    margin: 20px; /* Add margin for spacing */
+}
+
+.top-row {
+    display: flex; /* Use flexbox for top row */
+    justify-content: center; /* Center the images */
+    margin-bottom: 20px; /* Space between top and bottom rows */
+}
+
+.bottom-row {
+    display: flex; /* Use flexbox for bottom row */
+    flex-wrap: wrap; /* Allow wrapping of images */
+    justify-content: center; /* Center align images */
+}
+
+/* Image styles */
+.logo-image {
+    width: 100%; /* Make logo responsive */
+    max-width: 600px; /* Set maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.event-image {
+    width: 100%; /* Make event images responsive */
+    max-width: 400px; /* Set maximum width for event images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Space between images */
+    border-radius: 5px; /* Rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Adjustments for wider display */
+@media (min-width: 768px) {
+    .top-row, .bottom-row {
+        width: 90%; /* Allow more space for images */
+    }
+
+    .logo-image {
+        max-width: 30%; /* Allow logo to fill the available space */
+    }
+
+    .event-image {
+        max-width: calc(60% - 135px); /* Allow two images per row with spacing */
+    }
+}
